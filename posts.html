@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Weekly Round | Dr. Asmaa Saber Ghaly</title>
+  <meta name="description" content="Dr. Asmaa Saber Ghaly, Associate Professor of Obstetric and Gynecologic Nursing. Research, publications and teaching in women's health and nursing education.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Nursing with <span>Dr. Asmaa</span></a>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+    <nav class="nav">
+      <a href="index.html#research">Research</a>
+      <a href="index.html#weekly">The Weekly Round</a>
+      <a href="index.html#teaching">Teaching</a>
+      <a href="index.html#latest">Latest research</a>
+      <a href="index.html#resources">Resources</a>
+      <a href="publications.html">Publications</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="lang" href="ar/posts.html" lang="ar">العربية</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="block page-head" style="border-top:0">
+    <div class="wrap">
+      <h2>The Weekly Round</h2>
+      <p class="intro">A short note from me every week: memories from the places I have worked, stories from my students, and the research and publications behind them.</p>
+      <div class="pub-tools">
+        <button class="filter post-filter" data-type="all" aria-pressed="true">All</button>
+        <button class="filter post-filter" data-type="memory" aria-pressed="false">Memories</button>
+        <button class="filter post-filter" data-type="student" aria-pressed="false">Student stories</button>
+        <button class="filter post-filter" data-type="publication" aria-pressed="false">Publications</button>
+        <button class="filter post-filter" data-type="research" aria-pressed="false">Research</button>
+      </div>
+      <div class="posts-list" id="all-posts"></div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Dr. Asmaa Saber Ghaly · nursingwithdrasmaa.com</footer>
+
+<script src="assets/publications.js"></script>
+<script src="assets/posts.js"></script>
+<script>
+  initMenu();
+  initAllPosts("en", { soon: "The first post is coming soon.", none: "No posts of this type yet." });
+</script>
+</body>
+</html>

@@ -20,12 +20,11 @@
     <button class="menu-btn" aria-label="Menu">☰</button>
     <nav class="nav">
       <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
+      <a href="#weekly">The Weekly Round</a>
       <a href="#teaching">Teaching</a>
-      <a href="#talks">Talks</a>
-      <a href="#cv">CV</a>
       <a href="#latest">Latest research</a>
       <a href="#resources">Resources</a>
+      <a href="publications.html">Publications</a>
       <a href="#contact">Contact</a>
       <a class="lang" href="ar/" lang="ar">العربية</a>
     </nav>
@@ -86,23 +85,16 @@
         <h3>Doctoral research</h3>
         <p>“The Effect of Ginger Oil on Symptoms of Primary Dysmenorrhea.” PhD in Obstetric and Gynecologic Nursing, Faculty of Nursing, Alexandria University, 2015.</p>
       </div>
+      <p class="intro" style="margin:20px 0 0">30 journal articles, a book chapter, a conference paper and a preprint (2019–2026), with publishers including Elsevier, SAGE, BMC and PLOS. <a class="more-link" style="margin:0" href="publications.html">See all 33 publications →</a></p>
     </div>
   </section>
 
-  <section class="block" id="publications">
+  <section class="block" id="weekly">
     <div class="wrap">
-      <h2>Publications</h2>
-      <p class="intro">30 journal articles, a book chapter, a conference paper and a preprint (2019–2026), with publishers including Elsevier, SAGE, BMC and PLOS. Titles link to the article where a DOI is available.</p>
-      <div class="pub-tools">
-        <button class="filter" data-topic="all" aria-pressed="true">All</button>
-        <button class="filter" data-topic="W" aria-pressed="false">Women’s health</button>
-        <button class="filter" data-topic="E" aria-pressed="false">Nursing education</button>
-        <button class="filter" data-topic="S" aria-pressed="false">Patient safety &amp; community</button>
-        <select id="pub-year" aria-label="Year"><option value="all">All years</option></select>
-        <input id="pub-search" type="search" placeholder="Search titles, journals, authors" aria-label="Search publications">
-      </div>
-      <div class="pub-count" id="pub-count"></div>
-      <ul class="pubs" id="pubs"></ul>
+      <h2>The Weekly Round</h2>
+      <p class="intro">A short note from me every week: memories from the places I have worked, stories from my students, and the research and publications behind them.</p>
+      <div class="post-cards" id="latest-posts"></div>
+      <a class="more-link" href="posts.html">See all posts →</a>
     </div>
   </section>
 
@@ -277,19 +269,16 @@
 <footer>© 2026 Dr. Asmaa Saber Ghaly · nursingwithdrasmaa.com</footer>
 
 <script src="assets/publications.js"></script>
+<script src="assets/posts.js"></script>
 <script src="assets/feed.js"></script>
 <script>
   initMenu();
+  initLatestPosts("en", "posts.html", { soon: "The first post is coming soon.", more: "Read more" });
   initFeed({
     loading: "Loading the latest articles from PubMed…",
     source: "Source: PubMed (U.S. National Library of Medicine), last 60 days.",
     empty: "No new articles found for this topic right now.",
     error: 'Could not reach PubMed just now. <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">Search PubMed directly</a>.'
-  });
-  initPublications({
-    topics: { W: "Women’s health", E: "Nursing education", S: "Patient safety & community" },
-    types: { conference: "Conference paper", preprint: "Preprint", chapter: "Book chapter" },
-    count: n => `Showing ${n} of ${PUBLICATIONS.length} publications`
   });
 </script>
 </body>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الجولة الأسبوعية | د. أسماء صابر غالي</title>
+  <meta name="description" content="د. أسماء صابر غالي، أستاذ مشارك تمريض أمراض النساء والتوليد. الأبحاث والمنشورات والتدريس في صحة المرأة وتعليم التمريض.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">التمريض مع <span>د. أسماء</span></a>
+    <button class="menu-btn" aria-label="القائمة">☰</button>
+    <nav class="nav">
+      <a href="index.html#research">الأبحاث</a>
+      <a href="index.html#weekly">الجولة الأسبوعية</a>
+      <a href="index.html#teaching">التدريس</a>
+      <a href="index.html#latest">أحدث الأبحاث</a>
+      <a href="index.html#resources">مصادر مفيدة</a>
+      <a href="publications.html">المنشورات</a>
+      <a href="index.html#contact">التواصل</a>
+      <a class="lang" href="../posts.html" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="block page-head" style="border-top:0">
+    <div class="wrap">
+      <h2>الجولة الأسبوعية</h2>
+      <p class="intro">كلمة قصيرة مني كل أسبوع: ذكريات من الأماكن التي عملت بها، وقصص من طلابي، والأبحاث والمنشورات وما وراءها.</p>
+      <div class="pub-tools">
+        <button class="filter post-filter" data-type="all" aria-pressed="true">الكل</button>
+        <button class="filter post-filter" data-type="memory" aria-pressed="false">ذكريات</button>
+        <button class="filter post-filter" data-type="student" aria-pressed="false">قصص الطلاب</button>
+        <button class="filter post-filter" data-type="publication" aria-pressed="false">منشورات</button>
+        <button class="filter post-filter" data-type="research" aria-pressed="false">أبحاث</button>
+      </div>
+      <div class="posts-list" id="all-posts"></div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 د. أسماء صابر غالي · nursingwithdrasmaa.com</footer>
+
+<script src="../assets/publications.js"></script>
+<script src="../assets/posts.js"></script>
+<script>
+  initMenu();
+  initAllPosts("ar", { soon: "أول منشور قريبًا بإذن الله.", none: "لا توجد منشورات من هذا النوع بعد." });
+</script>
+</body>
+</html>

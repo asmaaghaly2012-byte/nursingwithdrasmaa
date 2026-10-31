@@ -20,12 +20,11 @@
     <button class="menu-btn" aria-label="القائمة">☰</button>
     <nav class="nav">
       <a href="#research">الأبحاث</a>
-      <a href="#publications">المنشورات</a>
+      <a href="#weekly">الجولة الأسبوعية</a>
       <a href="#teaching">التدريس</a>
-      <a href="#talks">المحاضرات</a>
-      <a href="#cv">السيرة الذاتية</a>
       <a href="#latest">أحدث الأبحاث</a>
       <a href="#resources">مصادر مفيدة</a>
+      <a href="publications.html">المنشورات</a>
       <a href="#contact">التواصل</a>
       <a class="lang" href="../" lang="en">English</a>
     </nav>
@@ -86,23 +85,16 @@
         <h3>رسالة الدكتوراه</h3>
         <p>«أثر زيت الزنجبيل على أعراض عسر الطمث الأولي». دكتوراه في تمريض أمراض النساء والتوليد، كلية التمريض، جامعة الإسكندرية، 2015.</p>
       </div>
+      <p class="intro" style="margin:20px 0 0">30 بحثًا في مجلات علمية، وفصل في كتاب، وورقة مؤتمر، ونسخة أولية (2019–2026)، مع ناشرين منهم Elsevier وSAGE وBMC وPLOS. <a class="more-link" style="margin:0" href="publications.html">عرض جميع المنشورات العلمية (33) ←</a></p>
     </div>
   </section>
 
-  <section class="block" id="publications">
+  <section class="block" id="weekly">
     <div class="wrap">
-      <h2>المنشورات</h2>
-      <p class="intro">30 بحثًا في مجلات علمية، وفصل في كتاب، وورقة مؤتمر، ونسخة أولية (2019–2026)، مع ناشرين منهم Elsevier وSAGE وBMC وPLOS. العناوين مرتبطة بالبحث حيثما توفّر رقم DOI، وتظهر بلغتها الأصلية الإنجليزية.</p>
-      <div class="pub-tools">
-        <button class="filter" data-topic="all" aria-pressed="true">الكل</button>
-        <button class="filter" data-topic="W" aria-pressed="false">صحة المرأة</button>
-        <button class="filter" data-topic="E" aria-pressed="false">تعليم التمريض</button>
-        <button class="filter" data-topic="S" aria-pressed="false">سلامة المرضى والمجتمع</button>
-        <select id="pub-year" aria-label="السنة"><option value="all">كل السنوات</option></select>
-        <input id="pub-search" type="search" placeholder="ابحث في العناوين والمجلات" aria-label="البحث في المنشورات">
-      </div>
-      <div class="pub-count" id="pub-count"></div>
-      <ul class="pubs" id="pubs"></ul>
+      <h2>الجولة الأسبوعية</h2>
+      <p class="intro">كلمة قصيرة مني كل أسبوع: ذكريات من الأماكن التي عملت بها، وقصص من طلابي، والأبحاث والمنشورات وما وراءها.</p>
+      <div class="post-cards" id="latest-posts"></div>
+      <a class="more-link" href="posts.html">عرض كل المنشورات ←</a>
     </div>
   </section>
 
@@ -277,19 +269,16 @@
 <footer>© 2026 د. أسماء صابر غالي · nursingwithdrasmaa.com</footer>
 
 <script src="../assets/publications.js"></script>
+<script src="../assets/posts.js"></script>
 <script src="../assets/feed.js"></script>
 <script>
   initMenu();
+  initLatestPosts("ar", "posts.html", { soon: "أول منشور قريبًا بإذن الله.", more: "اقرأ المزيد" });
   initFeed({
     loading: "جارٍ تحميل أحدث المقالات من PubMed…",
     source: "المصدر: PubMed (المكتبة الوطنية الأمريكية للطب)، آخر 60 يومًا.",
     empty: "لا توجد مقالات جديدة في هذا الموضوع حاليًا.",
     error: 'تعذّر الوصول إلى PubMed الآن. <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">ابحث في PubMed مباشرة</a>.'
-  });
-  initPublications({
-    topics: { W: "صحة المرأة", E: "تعليم التمريض", S: "سلامة المرضى والمجتمع" },
-    types: { conference: "ورقة مؤتمر", preprint: "نسخة أولية", chapter: "فصل في كتاب" },
-    count: n => `عرض ${n} من ${PUBLICATIONS.length} منشورًا`
   });
 </script>
 </body>

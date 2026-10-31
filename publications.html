@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications | Dr. Asmaa Saber Ghaly</title>
+  <meta name="description" content="Dr. Asmaa Saber Ghaly, Associate Professor of Obstetric and Gynecologic Nursing. Research, publications and teaching in women's health and nursing education.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Nursing with <span>Dr. Asmaa</span></a>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+    <nav class="nav">
+      <a href="index.html#research">Research</a>
+      <a href="index.html#weekly">The Weekly Round</a>
+      <a href="index.html#teaching">Teaching</a>
+      <a href="index.html#latest">Latest research</a>
+      <a href="index.html#resources">Resources</a>
+      <a href="publications.html">Publications</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="lang" href="ar/publications.html" lang="ar">العربية</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="block page-head" id="publications" style="border-top:0">
+    <div class="wrap">
+      <h2>Publications</h2>
+      <p class="intro">30 journal articles, a book chapter, a conference paper and a preprint (2019–2026), with publishers including Elsevier, SAGE, BMC and PLOS. Titles link to the article where a DOI is available.</p>
+      <div class="pub-tools">
+        <button class="filter" data-topic="all" aria-pressed="true">All</button>
+        <button class="filter" data-topic="W" aria-pressed="false">Women’s health</button>
+        <button class="filter" data-topic="E" aria-pressed="false">Nursing education</button>
+        <button class="filter" data-topic="S" aria-pressed="false">Patient safety &amp; community</button>
+        <select id="pub-year" aria-label="Year"><option value="all">All years</option></select>
+        <input id="pub-search" type="search" placeholder="Search titles, journals, authors" aria-label="Search publications">
+      </div>
+      <div class="pub-count" id="pub-count"></div>
+      <ul class="pubs" id="pubs"></ul>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Dr. Asmaa Saber Ghaly · nursingwithdrasmaa.com</footer>
+
+<script src="assets/publications.js"></script>
+<script>
+  initMenu();
+  initPublications({
+    topics: { W: "Women’s health", E: "Nursing education", S: "Patient safety & community" },
+    types: { conference: "Conference paper", preprint: "Preprint", chapter: "Book chapter" },
+    count: n => `Showing ${n} of ${PUBLICATIONS.length} publications`
+  });
+</script>
+</body>
+</html>
