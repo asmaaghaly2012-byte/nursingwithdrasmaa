@@ -24,6 +24,8 @@
       <a href="#teaching">Teaching</a>
       <a href="#talks">Talks</a>
       <a href="#cv">CV</a>
+      <a href="#latest">Latest research</a>
+      <a href="#resources">Resources</a>
       <a href="#contact">Contact</a>
       <a class="lang" href="ar/" lang="ar">العربية</a>
     </nav>
@@ -203,6 +205,60 @@
     </div>
   </section>
 
+  <section class="block" id="latest">
+    <div class="wrap">
+      <h2>Latest research in nursing</h2>
+      <p class="intro">The newest articles indexed in PubMed over the last 60 days, updated automatically every time you open this page. Pick a topic and click a title to read the abstract.</p>
+      <div class="pub-tools">
+        <button class="filter feed-filter" data-topic="W" aria-pressed="true">Maternal &amp; women’s health</button>
+        <button class="filter feed-filter" data-topic="E" aria-pressed="false">Nursing education &amp; simulation</button>
+        <button class="filter feed-filter" data-topic="S" aria-pressed="false">Patient safety &amp; infection prevention</button>
+        <button class="filter feed-filter" data-topic="M" aria-pressed="false">Nursing in Saudi Arabia &amp; the Middle East</button>
+      </div>
+      <div class="feed-status" id="feed-status"></div>
+      <ul class="feed" id="feed"></ul>
+    </div>
+  </section>
+
+  <section class="block alt" id="resources">
+    <div class="wrap">
+      <h2>Useful resources</h2>
+      <p class="intro">Free, trusted sites I recommend to my students and fellow researchers.</p>
+      <div class="grid-2">
+        <div class="card res-group">
+          <h3>🩺 For nursing students</h3>
+          <ul class="res-list">
+            <li><a href="https://www.who.int/publications/who-guidelines" target="_blank" rel="noopener">WHO guidelines</a><span>International clinical and public-health guidelines, including maternal and newborn care.</span></li>
+            <li><a href="https://www.nice.org.uk/guidance" target="_blank" rel="noopener">NICE guidance</a><span>Evidence-based UK guidelines, e.g. antenatal, intrapartum and postnatal care.</span></li>
+            <li><a href="https://www.acog.org/clinical" target="_blank" rel="noopener">ACOG clinical guidance</a><span>Obstetric and gynecologic practice bulletins and committee opinions.</span></li>
+            <li><a href="https://www.cdc.gov/infection-control/" target="_blank" rel="noopener">CDC infection control</a><span>Standard precautions, hand hygiene and isolation guidance.</span></li>
+            <li><a href="https://dailymed.nlm.nih.gov/" target="_blank" rel="noopener">DailyMed</a><span>Official drug information and package inserts.</span></li>
+            <li><a href="https://medlineplus.gov/" target="_blank" rel="noopener">MedlinePlus</a><span>Plain-language health information, useful for patient teaching.</span></li>
+            <li><a href="https://openstax.org/subjects/nursing" target="_blank" rel="noopener">OpenStax nursing textbooks</a><span>Free, peer-reviewed nursing textbooks.</span></li>
+            <li><a href="https://openwho.org/" target="_blank" rel="noopener">OpenWHO</a><span>Free online courses with certificates from the World Health Organization.</span></li>
+            <li><a href="https://scfhs.org.sa/" target="_blank" rel="noopener">Saudi Commission for Health Specialties</a><span>Professional classification, licensing exams (SNLE) and CME.</span></li>
+            <li><a href="https://www.ncsbn.org/exams.page" target="_blank" rel="noopener">NCSBN: NCLEX</a><span>Official information about the NCLEX licensure exam.</span></li>
+          </ul>
+        </div>
+        <div class="card res-group">
+          <h3>🔬 For healthcare researchers</h3>
+          <ul class="res-list">
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a><span>Free search of biomedical and nursing literature.</span></li>
+            <li><a href="https://www.cochranelibrary.com/" target="_blank" rel="noopener">Cochrane Library</a><span>Systematic reviews and evidence summaries.</span></li>
+            <li><a href="https://sdl.edu.sa/" target="_blank" rel="noopener">Saudi Digital Library</a><span>Full-text databases for Saudi university staff and students.</span></li>
+            <li><a href="https://www.ekb.eg/" target="_blank" rel="noopener">Egyptian Knowledge Bank</a><span>Free access to major publishers for researchers in Egypt.</span></li>
+            <li><a href="https://www.equator-network.org/" target="_blank" rel="noopener">EQUATOR Network</a><span>Reporting checklists: CONSORT, STROBE, PRISMA and more.</span></li>
+            <li><a href="https://jbi.global/critical-appraisal-tools" target="_blank" rel="noopener">JBI critical appraisal tools</a><span>Checklists to appraise studies for reviews and evidence-based practice.</span></li>
+            <li><a href="https://www.crd.york.ac.uk/prospero/" target="_blank" rel="noopener">PROSPERO</a><span>Register your systematic review protocol.</span></li>
+            <li><a href="https://www.zotero.org/" target="_blank" rel="noopener">Zotero</a><span>Free reference manager.</span></li>
+            <li><a href="https://www.jamovi.org/" target="_blank" rel="noopener">jamovi</a><span>Free, easy statistics software (an alternative to SPSS).</span></li>
+            <li><a href="https://thinkchecksubmit.org/" target="_blank" rel="noopener">Think. Check. Submit.</a><span>Check a journal before you submit, and avoid predatory publishers.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="block contact" id="contact">
     <div class="wrap">
       <h2>Contact</h2>
@@ -221,8 +277,15 @@
 <footer>© 2026 Dr. Asmaa Saber Ghaly · nursingwithdrasmaa.com</footer>
 
 <script src="assets/publications.js"></script>
+<script src="assets/feed.js"></script>
 <script>
   initMenu();
+  initFeed({
+    loading: "Loading the latest articles from PubMed…",
+    source: "Source: PubMed (U.S. National Library of Medicine), last 60 days.",
+    empty: "No new articles found for this topic right now.",
+    error: 'Could not reach PubMed just now. <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">Search PubMed directly</a>.'
+  });
   initPublications({
     topics: { W: "Women’s health", E: "Nursing education", S: "Patient safety & community" },
     types: { conference: "Conference paper", preprint: "Preprint", chapter: "Book chapter" },
